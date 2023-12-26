@@ -1,0 +1,36 @@
+[tool.poetry]
+authors = ["Ryan Munro <500774+munro@users.noreply.github.com>"]
+description = "Anki plugin showing banner for new cards"
+name = "anki-plugin-new-card"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+
+aqt = "^23.10.1"
+pyqt5 = "^5.15.10"
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "*"
+black = {version = "*", extras = ["jupyter"]}
+ipython = "*"
+isort = "*"
+jupyter = "*"
+jupyterlab = "*"
+plotly = "*"
+pytest = "^7.4.0"
+rich = {version = "*", extras = ["jupyter"]}
+
+[tool.pyright]
+reportPrivateImportUsage = false
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
